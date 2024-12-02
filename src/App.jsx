@@ -5,7 +5,7 @@ import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Testimonials from "./pages/Testimonials"
 import Contact from "./pages/Contact";
-import './index.css'
+import "./index.css"
 export default function App() {
 
   return (
