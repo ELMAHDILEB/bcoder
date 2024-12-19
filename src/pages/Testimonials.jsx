@@ -1,8 +1,12 @@
 import React from 'react'
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import { FaStar } from "react-icons/fa";
-import avatar from "../assets/avatar1.png";
 import { motion } from "framer-motion";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { RiDoubleQuotesR } from "react-icons/ri";
+import { FaStar } from "@react-icons/all-files/fa/FaStar";
+import avatar1 from "../assets/avatarTestimonials/avatar1_w_200.webp";
+import avatar2 from "../assets/avatarTestimonials/avatar1_w_617.webp";
+import avatar3 from "../assets/avatarTestimonials/avatar1_w_915.webp";
+import avatar from "../assets/avatarTestimonials/avatar1.webp";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -72,6 +76,8 @@ function Testimonials() {
         >What Our Client Say</motion.h2>
 
 
+
+
         <Swiper
 
           spaceBetween={30}
@@ -91,7 +97,7 @@ function Testimonials() {
               slidesPerView: 3,
             },
           }}
-          className="mySwiper"
+          className="mySwiper w-full swiper-container"
         >
           {clients.map((client, index) => {
             const { name, comment, link, stars } = client;
@@ -102,10 +108,16 @@ function Testimonials() {
                   initial={{ opacity: 0, y: "100vh" }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: "100vh" }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  transition={{ duration: 1 }}
                 >
                   <div className='w-[6em] h-[6em] overflow-hidden relative after:absolute after:content-[" "] after:top-0 after:left-0 after:bg-bgOrange after:w-full after:h-full after:-z-1 after:rounded-full'>
-                    <img src={avatar} alt={name} className='w-full h-full object-cover absolute z-10' />
+                    {/* <img src={avatar} alt={name} className=' object-cover absolute z-10'  loading='lazy'  width='100%' height='100%'  role='avatar'/> */}
+                    <img
+                     className=' object-cover absolute z-10'  loading='lazy'  width='100%' height='100%'  role='avatar'
+                      sizes="(max-width: 1400px) 100vw, 1400px"
+                      srcSet={`${avatar1} 200w, ${avatar2} 617w, ${avatar3} 915w,`}
+                      src={avatar}
+                      alt={name}></img>
                   </div>
                   <h1 className='relative after:absolute after:left-0 after:top-0 after:-z-10 -skew-y-3 bg-bgOrange  cursor-pointer text-xl '>{name}</h1>
                   <p className='text-center w-full h-[150px] flex items-center justify-center'>{comment}</p>
@@ -120,6 +132,7 @@ function Testimonials() {
             );
           })}
         </Swiper>
+
 
       </section>
     </>

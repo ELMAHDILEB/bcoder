@@ -54,7 +54,7 @@ export default function Navbar() {
     return (
         <>
 
-            <header className="w-full md:w-[90%] h-[70px] mx-auto my-0 p-[2%] flex items-center  justify-between relative font-bebas  tracking-wider	z-[10000000000]">
+            <header className="w-full md:w-[90%] h-[70px] mx-auto my-0 p-[2%] flex items-center  justify-between relative  tracking-wider	z-[10000000000]">
                 {!toggle ? (<CiMenuFries className="block md:hidden cursor-pointer text-2xl" onClick={handleToggle} />) : (<IoClose className="block md:hidden cursor-pointer text-2xl" onClick={handleToggle} />)}
   
                 <nav
@@ -83,7 +83,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-5">
 
                     <div className="flex items-center gap-5 bg-slate-200 dark:bg-[#5e5e5e]  dark:text-white px-[25px] py-[10px] rounded-[20px] text-black border-black dark:border-white border-solid  border-2">
-                        <p className="font-bebas hidden md:block">{textCopy}</p>
+                        <p className=" hidden md:block">{textCopy}</p>
                         <div className="md:hidden">
                             <CiMail onClick={handleCopy} className="cursor-pointer hover:text-[#004a57]" />
                         </div>

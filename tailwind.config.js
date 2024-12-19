@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-
-
 export default {
   darkMode: 'class',
   content: [
@@ -19,9 +17,9 @@ export default {
         bgOrange: "#ffb42a",
       },
       fontFamily: {
-        bebas: ['"Bebas Neue", sans-serif'],
-        ibm: ['"IBM Plex Mono", serif'],
-        lato: ['"Lato", sans-serif'],
+        bebas:["Bebas", "sans-serif"],
+        // ibm: ['"IBM Plex Mono", serif'],
+        // lato: ['"Lato", sans-serif'],
         poppins: ['"Poppins", sans-serif']
       },
     },

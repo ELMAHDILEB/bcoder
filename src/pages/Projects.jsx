@@ -64,7 +64,7 @@ function Projects() {
   <>
       
     <section className='w-full flex items-center justify-center gap-10 flex-col  pt-20'>
-      <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] font-bebas tracking-[2px]'
+      <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] tracking-[2px]'
           initial={{ opacity: 1, y: "50vh", }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "50vh" }}
@@ -93,7 +93,7 @@ function Projects() {
           </div>
          <h3 className='w-fit relative after:absolute left-0 top-0 -z-10 -skew-y-3 bg-bgOrange '>{title}</h3>
           <p>Technologies</p>
-          <span className='text-bold'>{technologies.join(" - ")}</span>
+          <span className='text-normal text-[12px]'>{technologies.join(" - ")}</span>
           <a href={link} target="_blank" rel="noopener noreferrer" role='link' className='flex items-center gap-10'>
               View Project  <FaArrowRight/>
             </a>

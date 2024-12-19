@@ -1,17 +1,37 @@
-import React from "react";
+import React, {useRef} from "react";
+import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 
 function Form() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hvoujea', 'template_dim2f5f', form.current, {
+        publicKey: 'W4UZzhhDWjLFjar0Y',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
   return (
     <>
       <motion.form
+        ref={form}
+        onSubmit={sendEmail}
         action=""
-        className="w-full md:w-[50%] h-auto flex flex-col items-center justify-center gap-4  p-6 rounded-md shadow-md font-bebas "
+        className="w-full md:w-[50%] h-auto flex flex-col items-center justify-center gap-4  p-6 rounded-md shadow-md "
         method="POST"
-        initial={{opacity:0, y:"100vh"}}
-             animate={{opacity:1, y:0}}
-             exit={{opacity:0, y:"100vh"}}
-              transition={{duration:1, delay:0.5}}
+        initial={{ opacity: 0, y: "100vh" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "100vh" }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
 
 
@@ -27,9 +47,9 @@ function Form() {
           placeholder="Your Name"
         />
 
-      
+
         <label htmlFor="num" className=" uppercase text-semibold">
-        Number Phone:
+          Number Phone:
         </label>
         <input
           type="text"
@@ -56,7 +76,7 @@ function Form() {
           Message:
         </label>
         <textarea
-          name="content"
+          name="message"
           id="message"
           className="w-full max-w-[400px] h-[200px] rounded-md bg-gray-200 border-none outline-none p-2 resize-none text-black"
           placeholder="Message"
@@ -67,14 +87,17 @@ function Form() {
           name="submit"
           aria-pressed="false"
           aria-label="Send Message"
+          type="submit"
+            value="Send"
         >
           <a
-            href="mailto:maktabEstekdam@gmail.com"
-            target="_blank"
+            // href="mailto:maktabEstekdam@gmail.com"
+            // target="_blank"
             rel="noopener noreferrer"
             className="no-underline  dark:text-white text-black  tracking-[2px]"
+
           >
-           Send
+            Send
           </a>
         </button>
       </motion.form>

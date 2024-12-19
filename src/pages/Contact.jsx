@@ -1,14 +1,16 @@
 import React from 'react'
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { motion } from "framer-motion";
-import Form from "../components/Form"
+import Form from "../components/Form";
+
 
 function Contact() {
+
   return (
     <>
 
-      <section className='w-full flex items-center justify-center gap-10 flex-col  pt-20 font-bebas p-[2%]'>
-        <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] font-bebas tracking-[2px]'
+      <section className='w-full flex items-center justify-center gap-10 flex-col  pt-20p-[2%]'>
+        <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em]  tracking-[2px]'
           initial={{ opacity: 0, y: "50vh", }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "50vh" }}
