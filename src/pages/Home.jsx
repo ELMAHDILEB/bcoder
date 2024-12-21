@@ -1,4 +1,4 @@
-import React, { memo } from 'react'; // Import memo
+import React, { memo } from 'react'; 
 import avatar from "../assets/avatar.webp";
 import { TbPointFilled } from "react-icons/tb";
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { SiLeetcode, SiFiverr, SiUpwork } from "react-icons/si";
 import { CiCoffeeCup } from "react-icons/ci";
 import { easeIn, easeInOut, motion } from "framer-motion";
 
-const Home = memo(() => { // Wrap component with memo
+const Home = memo(() => { 
 
   const backgroundVariants = {
     hidden: { width: "0%" },
