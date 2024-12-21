@@ -5,13 +5,13 @@
 @tailwind utilities;
  @font-face{
   font-family: "Bebas";
-  src: url("../dist/fonts/Bebas.ttf");
+  src: url("./fonts/Bebas.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face{
   font-family: "Poppins";
-  src: url("../dist/fonts/Poppins.ttf");
+  src: url("./fonts/Poppins.ttf");
   font-weight: 300;
   font-style: normal;
   font-size: 0.9em;
