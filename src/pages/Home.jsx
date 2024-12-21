@@ -62,7 +62,7 @@ const Home = memo(() => { // Wrap component with memo
             animate="visible"
             transition={{ duration: 4, ease: easeInOut, delay: 1 }}
           />
-          Successful Front-end Development
+          Successful Front-end Developer
         </motion.h1>
 
         <motion.h2
