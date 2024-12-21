@@ -96,7 +96,7 @@ function About() {
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >
-          <motion.p aria-label="description" className="font-poppins text-normal text-sm tracking-[1px]  leading-[1.50rem]">
+          <motion.p aria-label="description" className=" text-normal text-sm tracking-[1px]  leading-[1.50rem]">
             I am an enthusiastic and driven front-end developer aspiring to join a forward-thinking organization where I can explore innovative technologies and contribute to exciting, multifaceted projects. My solid expertise in front-end development empowers me to create impactful digital experiences.
 
             With a passion for continuous learning, I thrive on solving complex challenges and refining my critical thinking abilities. Staying ahead of industry trends and advancing my technical skills is a key priority, as I strive to deliver exceptional solutions in the ever-evolving tech landscape.
@@ -104,7 +104,7 @@ function About() {
         </motion.article>
 
         <nav className="w-4/5 md:w-full flex flex-col align-center justify-center  gap-10">
-          <motion.h1 className="w-full h-fit relative text-center text-black dark:text-white  md:text-[1.5em] font-bebas tracking-[2px]"
+          <motion.h1 className="w-full h-fit relative text-center text-black dark:text-white  md:text-[1.5em]  tracking-[2px]"
             aria-label="title"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
