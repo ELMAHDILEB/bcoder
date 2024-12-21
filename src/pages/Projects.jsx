@@ -55,7 +55,7 @@ function Projects() {
     },
     {
       title: "مكتب الاحتراف المهني للاستقدام ",
-      link: "https://elmahdileb.github.io/landing-page-paint/",
+      link: "https://elmahdileb.github.io/maktabestekdam/",
       img:maktabestekdam,
       technologies:["HTML", "CSS", "JAVASCRIPT"]
     },
@@ -75,12 +75,13 @@ function Projects() {
         <RiDoubleQuotesR className='absolute right-0 bottom-0 opacity-60'/>
       </motion.h1>
       
-      <menu className='w-full  max-w-[1000px] flex  items-center justify-center md:justify-between flex-wrap gap-5 	'>
+      {/* <menu className='w-full  max-w-[1000px] flex  items-center justify-center md:justify-between flex-wrap gap-5 	'> */}
+      <menu className='w-full  max-w-[1000px] flex items-start  justify-center flex-wrap gap-[20px] 	'>
      
       {allProjects.slice(0,visible).map((project, index)=>{
         const {img, title,link,technologies} = project;
         return (
-          <motion.div className='w-full max-w-[318px] h-[22em]  border-bgOrange border-2 flex items-center  gap-2 flex-col font-poppins' key={index}
+          <motion.div className='w-full max-w-[300px]  h-[22em]  border-bgOrange border-2 flex items-center  gap-2 flex-col font-poppins' key={index}
            initial={{opacity:0}}
            animate={{opacity:1}}
            transition={{
