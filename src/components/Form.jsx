@@ -26,7 +26,7 @@ function Form() {
         ref={form}
         onSubmit={sendEmail}
         action=""
-        className="w-full md:w-[50%] h-auto flex flex-col items-center justify-center gap-4  p-6 rounded-md shadow-md "
+        className="w-full  h-auto flex flex-col items-center justify-center gap-4  p-6 rounded-md shadow-md  dark:bg-[#5e5e5e] bg-[#dee4ec]"
         method="POST"
         initial={{ opacity: 0, y: "100vh" }}
         animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ function Form() {
           type="text"
           name="name"
           id="name"
-          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center text-black"
+          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center text-black shadow-md"
           placeholder="Your Name"
         />
 
@@ -55,7 +55,7 @@ function Form() {
           type="text"
           name="num"
           id="num"
-          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center  text-black"
+          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center  text-black shadow-md"
           placeholder="Number Phone"
         />
 
@@ -67,7 +67,7 @@ function Form() {
           type="text"
           name="subject"
           id="subject"
-          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center text-black"
+          className="w-full max-w-[400px] h-[40px] rounded-md bg-gray-200 border-none outline-none text-center text-black shadow-md"
           placeholder="Subject"
         />
 
@@ -78,12 +78,12 @@ function Form() {
         <textarea
           name="message"
           id="message"
-          className="w-full max-w-[400px] h-[200px] rounded-md bg-gray-200 border-none outline-none p-2 resize-none text-black"
+          className="w-full max-w-[400px] h-[200px] rounded-md bg-gray-200 border-none outline-none p-2 resize-none text-black shadow-md"
           placeholder="Message"
         ></textarea>
 
         <button
-          className="relative after:absolute after:left-0 after:top-0 after:-z-10 -skew-y-3 bg-bgOrange  cursor-pointer text-3xl  "
+          className="relative after:absolute after:left-0 after:top-0 after:-z-10 -skew-y-3 bg-bgOrange  cursor-pointer rounded-[4px]"
           name="submit"
           aria-pressed="false"
           aria-label="Send Message"
@@ -94,7 +94,7 @@ function Form() {
             // href="mailto:maktabEstekdam@gmail.com"
             // target="_blank"
             rel="noopener noreferrer"
-            className="no-underline  dark:text-white text-black  tracking-[2px]"
+            className="no-underline  dark:text-white text-black  tracking-[2px] text-[1.5em] font-bold"
 
           >
             Send

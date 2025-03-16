@@ -1,4 +1,4 @@
-import React from 'react'
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { RiDoubleQuotesR } from "react-icons/ri";
@@ -58,16 +58,27 @@ function Testimonials() {
   ]
   return (
     <>
-
+      <Helmet>
+        <title>Testimonials - Portfolio</title>
+        <meta name="description" content="Explore my latest projects including web development, UI/UX designs, and more." />
+        <meta property="og:title" content="Testimonials  - Portfolio" />
+        <meta property="og:description" content="Explore my latest projects including web development, UI/UX designs, and more." />
+        <meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
       <section className='w-full flex items-center justify-center gap-4 flex-col  pt-20 font-bebas text-black dark:text-white '>
-        <motion.h1 className='relative px-[5%] text-bgOrange text-[1.5em] md:text-[3em]  tracking-[2px]'
-          initial={{ opacity: 0, y: "50vh", }}
+        <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] tracking-[5px] font-medium font-bebas'
+          initial={{ opacity: 1, y: "50vh", }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
+        >
+          <RiDoubleQuotesL className='absolute left-0 top-0 opacity-60 text-2xl' />
+          Testimonials
+          <RiDoubleQuotesR className='absolute right-0 bottom-0 opacity-60 text-2xl' />
+        </motion.h1>
 
-        > <RiDoubleQuotesL className='absolute left-0 top-0 opacity-[0.5]' /> Testimonials <RiDoubleQuotesR className='absolute right-0 bottom-0 opacity-[0.5]' /></motion.h1>
         <motion.h2 className='tracking-[2px] opacity-[0.8] text-[1.2em]'
           initial={{ opacity: 0, y: "-50vh", }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,7 +124,7 @@ function Testimonials() {
                   <div className='w-[6em] h-[6em] overflow-hidden relative after:absolute after:content-[" "] after:top-0 after:left-0 after:bg-bgOrange after:w-full after:h-full after:-z-1 after:rounded-full'>
                     {/* <img src={avatar} alt={name} className=' object-cover absolute z-10'  loading='lazy'  width='100%' height='100%'  role='avatar'/> */}
                     <img
-                     className=' object-cover absolute z-10'  loading='lazy'  width='100%' height='100%'  role='avatar'
+                      className=' object-cover absolute z-10' loading='lazy' width='100%' height='100%' role='avatar'
                       sizes="(max-width: 1400px) 100vw, 1400px"
                       srcSet={`${avatar1} 200w, ${avatar2} 617w, ${avatar3} 915w,`}
                       src={avatar}

@@ -14,7 +14,7 @@ export default {
         black: '#181818',
         darkBg: '#181818',
         darkText: '#ffffff',
-        bgOrange: "#ffb42a",
+        bgOrange: "#ffb42a", 
       },
       fontFamily: {
         bebas:["Bebas", "sans-serif"],

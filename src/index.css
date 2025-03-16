@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -23,22 +23,10 @@ body {
    background-color: #f0f0f0;
    overflow-x: hidden;
    position: relative;
-   font-family: "Bebas";
+   font-family: "Montserrat", sans-serif!important;
+
 }
-/* body::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #e2e8f0;
-  width:100%;
-  height: 100%;
-  transform: skewY(-3deg);
-  z-index: -1000;
-}
-.dark body::after{
-  background-color: #626262;
-} */
+
 
   .dark body {
     background-color: #282828;

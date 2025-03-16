@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { FaCopy, FaCheck } from "react-icons/fa";
-import { CiLight, CiDark, CiMail } from "react-icons/ci";
-import { CiMenuFries } from "react-icons/ci";
+import { CiLight, CiDark, CiMail, CiMenuFries } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import { useState, useEffect, } from "react";
 
@@ -68,8 +67,8 @@ export default function Navbar() {
                                     to={link.to}
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "text-[#ffb42a] no-underline capitalize text-2xl leading-7 font-medium transition-all duration-300 ease-in-out"
-                                            : "no-underline capitalize text-lg leading-7 font-medium"
+                                            ? "text-[#ffb42a] no-underline uppercase text-[14px] leading-7 font-semibold transition-all duration-300 ease-in-out"
+                                            : "no-underline uppercase text-[14px] leading-7 font-semibold"
                                     }
                                     onClick={handleOut}
                                 >
@@ -82,8 +81,8 @@ export default function Navbar() {
 
                 <div className="flex items-center gap-5">
 
-                    <div className="flex items-center gap-5 bg-slate-200 dark:bg-[#5e5e5e]  dark:text-white px-[25px] py-[10px] rounded-[20px] text-black border-black dark:border-white border-solid  border-2">
-                        <p className=" hidden md:block">{textCopy}</p>
+                    <div className="flex items-center gap-5 bg-slate-200 dark:bg-[#5e5e5e]  dark:text-white px-[20px] py-[8px] rounded-[20px] text-black border-black dark:border-white border-solid  border-2">
+                        <p className=" hidden xl:block lowercase text-[15px] leading-7  font-extrabold text-gray-900 dark:text-[rgb(255,211,130)]">{textCopy}</p>
                         <div className="md:hidden">
                             <CiMail onClick={handleCopy} className="cursor-pointer hover:text-[#004a57]" />
                         </div>

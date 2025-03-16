@@ -1,13 +1,21 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-const Navbar = lazy(() => import('./components/Navbar'));
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLayout from './Layout/MainLayout';
+import { HelmetProvider } from 'react-helmet-async';
+import "./index.css";
+
+
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Contact = lazy(() => import('./pages/Contact'));
-import "./index.css"
+const PageNotFound = lazy(() => import('./pages/PageNotFound'));
+
+
 export default function App() {
+
+
 
   const pathElement = [
     { path: "/", element: <Home /> },
@@ -15,24 +23,28 @@ export default function App() {
     { path: "/projects", element: <Projects /> },
     { path: "/testimonials", element: <Testimonials /> },
     { path: "/contact", element: <Contact /> },
+    { path: "*", element: <PageNotFound /> },
   ]
 
   return (
-   <Suspense fallback={<div>Loading...</div>}>
+    <HelmetProvider>
+  {/* //  <Suspense fallback={<div className='w-full h-screen flex items-center justify-center'><PacmanLoader color="#ffb42a"/>.</div>}> */}
      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }} >
-      <Navbar />
 
+       
 
-      <section className="w-full md:w-[80%] calcHeight mx-auto ">
         <Routes>
+        <Route element={<MainLayout/>} >
           {pathElement.map((to, index) => ( 
             <Route key={index} path={to.path} element={to.element} />
           ))}
+          </Route>
         </Routes>
 
-      </section>
-
+      
     </Router>
-   </Suspense>
-  )
+    </HelmetProvider>
+  //  </Suspense>
+)
 }
+
