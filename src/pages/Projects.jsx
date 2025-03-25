@@ -64,7 +64,7 @@ function Projects() {
   return (
     <>
       <Helmet>
-        <title>Portfolio</title>
+        <title>Projects</title>
         <meta
           name="description"
           content="Check out my latest projects in web development, UI design, and user experience."
