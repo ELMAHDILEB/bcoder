@@ -9,7 +9,7 @@ const Navbar = lazy(() => import('../components/Navbar'));
       return localStorage.getItem("theme") === "dark";
     })
     useEffect(()=>{
-      const timer = setTimeout(()=>setIsLoading(false), 1200);
+      const timer = setTimeout(()=>setIsLoading(false), 1000);
   
       return ()=>  clearTimeout(timer);
     },[]);
@@ -23,7 +23,7 @@ const Navbar = lazy(() => import('../components/Navbar'));
   
     
      return <><Navbar /> 
-      <section className="w-full md:w-[80%] calcHeight mx-auto  "> <Outlet/></section>
+      <section className="w-full md:w-[80%] h-full  mx-auto"> <Outlet/></section>
     </>
   
   }

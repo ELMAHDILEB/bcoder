@@ -1,8 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { RiDoubleQuotesL } from "react-icons/ri";
-import { RiDoubleQuotesR } from "react-icons/ri";
-import { FaStar } from "@react-icons/all-files/fa/FaStar";
+import { FaStar } from "react-icons/fa";
 import avatar1 from "../assets/avatarTestimonials/avatar1_w_200.webp";
 import avatar2 from "../assets/avatarTestimonials/avatar1_w_617.webp";
 import avatar3 from "../assets/avatarTestimonials/avatar1_w_915.webp";
@@ -68,15 +66,13 @@ function Testimonials() {
       </Helmet>
 
       <section className='w-full flex items-center justify-center gap-4 flex-col  pt-20 font-bebas text-black dark:text-white '>
-        <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] tracking-[5px] font-medium font-bebas'
+        <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
           initial={{ opacity: 1, y: "50vh", }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >
-          <RiDoubleQuotesL className='absolute left-0 top-0 opacity-60 text-2xl' />
-          Testimonials
-          <RiDoubleQuotesR className='absolute right-0 bottom-0 opacity-60 text-2xl' />
+          {"{"} testimonials {"}"}
         </motion.h1>
 
         <motion.h2 className='tracking-[2px] opacity-[0.8] text-[1.2em]'
@@ -85,10 +81,6 @@ function Testimonials() {
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >What Our Client Say</motion.h2>
-
-
-
-
         <Swiper
 
           spaceBetween={30}
@@ -115,7 +107,7 @@ function Testimonials() {
             return (
               <SwiperSlide key={index} className='pb-10 cursor-pointer'
               >
-                <motion.div className='w-[300px] h-fit p-10 dark:bg-[#5e5e5e] bg-[#dee4ec] text-black font-bebas flex flex-col items-center justify-evenly gap-5 rounded-[10px]'
+                <motion.article className='w-[300px] h-fit p-10 dark:bg-[#5e5e5e] bg-[#dee4ec] text-black font-bebas flex flex-col items-center justify-evenly gap-5 rounded-[10px] hover:scale-105 transition-transform duration-300'
                   initial={{ opacity: 0, y: "100vh" }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: "100vh" }}
@@ -131,14 +123,16 @@ function Testimonials() {
                       alt={name}></img>
                   </div>
                   <h1 className='relative after:absolute after:left-0 after:top-0 after:-z-10 -skew-y-3 bg-bgOrange  cursor-pointer text-xl '>{name}</h1>
-                  <p className='text-center w-full h-[150px] flex items-center justify-center'>{comment}</p>
+                  <p className='text-center w-full h-[150px] flex items-center justify-center text-black dark:text-white'>{comment}</p>
                   <div className="flex items-center gap-1 text-yellow-500">
                     {Array.from({ length: stars }, (_, index) => (
                       <FaStar key={index} />
                     ))}
                   </div>
-                  <a href={link} target='_blank'>Preview</a>
-                </motion.div>
+                  <a href={link} target='_blank' className="tracking-[2px] px-4 py-2 bg-[#2a5c92] text-white rounded-lg hover:bg-blue-700 transition duration-300">
+                    Preview
+                  </a>
+                </motion.article>
               </SwiperSlide>
             );
           })}

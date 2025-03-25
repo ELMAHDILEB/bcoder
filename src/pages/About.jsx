@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPhp, FaGit, FaFigma } from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiRevealdotjs, SiAdobephotoshop } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -78,15 +77,14 @@ function About() {
         <meta property="og:type" content="website" />
       </Helmet>
       <section className="w-full flex items-center justify-center gap-10 flex-col  pt-20 pb-20">
-      <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] md:text-[3em] tracking-[5px] font-medium font-bebas'
-          initial={{ opacity: 1, y: "50vh", }}
+        <motion.h1
+          className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
+          initial={{ opacity: 1, y: "50vh" }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >
-          <RiDoubleQuotesL className='absolute left-0 top-0 opacity-60 text-2xl' />
-          About
-          <RiDoubleQuotesR className='absolute right-0 bottom-0 opacity-60 text-2xl' />
+          {"{"} about {"}"}
         </motion.h1>
 
         <motion.article className="w-4/5 md:w-full text-start md:text-start"
@@ -119,8 +117,8 @@ function About() {
 
           </motion.h1>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 " initial={{ opacity: 0 }}
-      
+          <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 " initial={{ opacity: 0 }}
+
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}>
 
@@ -132,7 +130,7 @@ function About() {
                   animate={{ opacity: 1 }}
                   transition={{
                     duration: 0.5,
-                    delay:  index * 0.2,
+                    delay: index * 0.2,
                   }}
                   whileHover={{
                     borderColor: "#ffb42a",
@@ -141,7 +139,7 @@ function About() {
                     transition: { duration: 0.4 },
                   }}
                 >
-                  <Icon size={30} className=" text-[#ffb42a]" aria-label={skill.title} role="logo" />
+                  <Icon size={30} className=" text-[#ffb42a]" aria-label={skill.title} role="img" />
                   <span className="text-center capitalize text-sm leading-7 font-semibold text-gray-700 dark:text-gray-50">{skill.title}</span>
                 </motion.li>
               )

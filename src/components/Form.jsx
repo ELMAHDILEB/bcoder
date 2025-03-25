@@ -1,31 +1,70 @@
-import React, {useRef} from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 
 function Form() {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
 
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState("");
+  useEffect(()=>{
+    if(message){
+      const timer = setTimeout(()=>{
+        setMessage("");
+  
+      }, 2000)
+      return () => clearTimeout(timer);
+    }
+  },[message]);
+
+  const validatorForm = (data) => {
+    const errors = {};
+    // validate input full name
+    if (!data.name.trim())  errors.name = "Full name is required!";
+    // validate input phone number
+    const phonePattern = /^[0-9]+$/;
+    if (!data.num.trim()) {
+      errors.num = "Number Phone is required!";
+    } else if (!phonePattern.test(data.num)) {
+      errors.num = "Phone number must contain only numbers.";
+    }
+    // validate input subject
+    if (!data.subject.trim()) errors.subject = "Subject is required.";
+    // validate text area
+    if (!data.message.trim()) errors.message = "Message is required.";
+    return errors;
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData)
+    const errors = validatorForm(data);
+
+    if (Object.keys(errors).length > 0) {
+      setErrors(errors)
+      return false;
+    }
     emailjs
-      .sendForm('service_hvoujea', 'template_dim2f5f', form.current, {
+      .sendForm('service_hvoujea', 'template_dim2f5f', e.currentTarget, {
         publicKey: 'W4UZzhhDWjLFjar0Y',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+      .then(() => {
+        setMessage("SUCCESS SEND ✅️"); 
+        setErrors({});
+        e.target.reset();
+      })
+      .catch((error) => {
+        setMessage("FAILED ❌ " + error.text); 
+      });
+  }
+
+
+
+
   return (
     <>
       <motion.form
-        ref={form}
-        onSubmit={sendEmail}
-        action=""
+        onSubmit={handleSubmit}
         className="w-full  h-auto flex flex-col items-center justify-center gap-4  p-6 rounded-md shadow-md  dark:bg-[#5e5e5e] bg-[#dee4ec]"
         method="POST"
         initial={{ opacity: 0, y: "100vh" }}
@@ -34,11 +73,10 @@ function Form() {
         transition={{ duration: 1, delay: 0.5 }}
       >
 
-
-
-        <label htmlFor="name" className=" uppercase text-semibold">
+<label htmlFor="name" className=" uppercase text-semibold">
           Name:
-        </label>
+        </label>  
+        <span className="text-[#554545] dark:text-[#ffcdcd]">{errors.name}</span>
         <input
           type="text"
           name="name"
@@ -51,6 +89,7 @@ function Form() {
         <label htmlFor="num" className=" uppercase text-semibold">
           Number Phone:
         </label>
+        <span className="text-[#554545] dark:text-[#ffcdcd]">{errors.num}</span>
         <input
           type="text"
           name="num"
@@ -63,6 +102,7 @@ function Form() {
         <label htmlFor="subject" className=" uppercase text-semibold">
           Subject:
         </label>
+        <span className="text-[#554545] dark:text-[#ffcdcd]">{errors.subject}</span>
         <input
           type="text"
           name="subject"
@@ -75,6 +115,7 @@ function Form() {
         <label htmlFor="message" className=" uppercase text-semibold">
           Message:
         </label>
+        <span className="text-[#554545] dark:text-[#ffcdcd]">{errors.message}</span>
         <textarea
           name="message"
           id="message"
@@ -88,18 +129,18 @@ function Form() {
           aria-pressed="false"
           aria-label="Send Message"
           type="submit"
-            value="Send"
+          value="Send"
+
         >
           <a
-            // href="mailto:maktabEstekdam@gmail.com"
-            // target="_blank"
             rel="noopener noreferrer"
             className="no-underline  dark:text-white text-black  tracking-[2px] text-[1.5em] font-bold"
-
           >
             Send
           </a>
         </button>
+
+        {message && <p className="text-center text-lg font-bold mt-2 transition-all duration-500">{message}</p>}
       </motion.form>
     </>
   );

@@ -28,7 +28,6 @@ export default function App() {
 
   return (
     <HelmetProvider>
-  {/* //  <Suspense fallback={<div className='w-full h-screen flex items-center justify-center'><PacmanLoader color="#ffb42a"/>.</div>}> */}
      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }} >
 
        
@@ -44,7 +43,7 @@ export default function App() {
       
     </Router>
     </HelmetProvider>
-  //  </Suspense>
 )
 }
+
 
