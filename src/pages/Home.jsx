@@ -53,8 +53,8 @@ const Home = memo(() => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
 
-      <section className='w-full md:w-[80%] calcHeight  mx-auto'>
-        <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden">
+      <section className='w-full md:w-[80%] calcHeight mx-auto'>
+        <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden px-4 md:px-0">
           <motion.picture
             className="w-[150px] h-[150px] overflow-hidden"
             initial={{ opacity: 0, y: "100%" }}
