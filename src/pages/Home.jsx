@@ -53,7 +53,7 @@ const Home = memo(() => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
 
-      <section className='w-full md:w-[80%] calcHeight mx-auto'>
+      <section className='w-full md:w-[80%] calcHeight  mx-auto'>
         <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden px-4 md:px-0">
           <motion.picture
             className="w-[150px] h-[150px] overflow-hidden"
@@ -70,7 +70,7 @@ const Home = memo(() => {
             />
           </motion.picture>
 
-          <div className="flex flex-col items-center justify-center gap-5 font-bebas text-center">
+          <div className="flex flex-col items-center justify-center gap-7 font-bebas text-center">
             <motion.h1
               className="relative text-center dark:text-white text-[#181818] font-bold  font-bebas tracking-[2px] md:tracking-[4px] z-10 text-[clamp(30px,3vw,200px)]"
               aria-label="Successful Front-end Development"
@@ -90,16 +90,15 @@ const Home = memo(() => {
             </motion.h1>
 
             <motion.h2
-              className="tracking-[2px] font-bold text-[14px] uppercase"
+              className="tracking-[2px] font-bold text-[14px] uppercase font-poppins text-center md:text-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 1.2 }}
-              style={{fontFamily: "Poppins", "sans-serif"}}
             >
               Hi. I’m <span className="text-[#ffb42a] ml-3 font-black text-[3em] font-bebas leading-[50px]">B</span>Coder, a freelance Front-end Developer with 3 years of commercial experience creating successful websites.
             </motion.h2>
             <motion.h3
-              className="flex items-center justify-center tracking-[4px]"
+              className="flex items-center justify-center tracking-[4px] font-poppins font-semibold text-[14px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.3, delay: 1.3 }}
