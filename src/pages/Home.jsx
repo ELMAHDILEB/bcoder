@@ -90,12 +90,13 @@ const Home = memo(() => {
             </motion.h1>
 
             <motion.h2
-              className="md:text-[1.3em] tracking-[2px]"
+              className="tracking-[2px] font-bold text-[14px] uppercase"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 1.2 }}
+              style={{fontFamily: "Poppins", "sans-serif"}}
             >
-              Hi. I’m <span className="text-[1.5em] md:text-[3.5em] text-[#ffb42a] ml-3">B</span>Coder, a freelance Front-end Developer with 3 years of commercial experience creating successful websites.
+              Hi. I’m <span className="text-[#ffb42a] ml-3 font-black text-[3em] font-bebas leading-[50px]">B</span>Coder, a freelance Front-end Developer with 3 years of commercial experience creating successful websites.
             </motion.h2>
             <motion.h3
               className="flex items-center justify-center tracking-[4px]"
