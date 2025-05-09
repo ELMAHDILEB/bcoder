@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import avatar from "../assets/avatar.webp";
 import { TbPointFilled } from "react-icons/tb";
@@ -72,7 +72,7 @@ const Home = memo(() => {
 
           <div className="flex flex-col items-center justify-center gap-7 font-bebas text-center">
             <motion.h1
-              className="relative text-center dark:text-white text-[#181818] font-bold  font-bebas tracking-[2px] md:tracking-[4px] z-10 text-[clamp(30px,3vw,200px)]"
+              className="relative text-center dark:text-white text-[#181818] font-bold  font-bebas tracking-[2px] md:tracking-[4px] z-10 text-[clamp(25px,3vw,200px)]"
               aria-label="Successful Front-end Development"
               variants={textVariants}
               initial="hidden"
@@ -90,7 +90,7 @@ const Home = memo(() => {
             </motion.h1>
 
             <motion.h2
-              className="tracking-[2px] font-bold text-[14px] uppercase font-poppins text-center md:text-start"
+              className="tracking-[2px] font-bold text-[14px] uppercase font-poppins text-center md:text-start py-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 1.2 }}
