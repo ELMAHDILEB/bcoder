@@ -5,6 +5,7 @@ import maktabatabufahd from "../assets/maktabatabufahd.webp";
 import landingPagePaint from "../assets/landing-page-paint.webp";
 import store from "../assets/store.webp";
 import tajribatariya from "../assets/tajribatariya.webp";
+import amlouinou from "../assets/amlouinou.webp";
 import goodhome from "../assets/goodhome.webp";
 import sellingcars from "../assets/sellingcars.webp";
 import maktabestekdam from "../assets/maktabestekdam.webp";
@@ -18,6 +19,12 @@ function Projects() {
 
   }
   const allProjects = [
+    {
+      title: "Amlou Inou Ecommerce",
+      link: "https://amlou-ecommerce-website.vercel.app/",
+      img: amlouinou,
+      technologies: ["REACTJS", "TAILWIND CSS"]
+    },
     {
       title: "GOODHOME V1",
       link: "https://elmahdileb.github.io/goodhome/",
