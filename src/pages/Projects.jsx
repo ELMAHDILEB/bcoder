@@ -71,40 +71,48 @@ function Projects() {
   return (
     <>
       <Helmet>
-        <title>Projects</title>
+        <title>bcoder | My Projects in Web Development & UI Design</title>
+
         <meta
           name="description"
-          content="Check out my latest projects in web development, UI design, and user experience."
+          content="Explore the latest projects by bcoder in web development, UI/UX design, and modern technologies like React and Node.js."
+        />
+        <meta
+          name="keywords"
+          content="bcoder, portfolio projects, web development, UI design, UX design, JavaScript projects, React, Node.js, frontend, backend, full stack, HTML, CSS, freelance developer"
         />
         <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Language" content="ar" />
+        <meta httpEquiv="Content-Language" content="en" />
         <meta name="author" content="EL MAHDI" />
         <meta
           name="googlebot"
           content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
-        <meta
-          property="og:title"
-          content="مشاريعي - Portfolio"
-        />
+
+        {/* Open Graph (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="My Projects | bcoder Portfolio" />
         <meta
           property="og:description"
-          content="Check out my latest projects in web development, UI design, and user experience."
+          content="Discover bcoder's latest work in web development and UI/UX design using modern frameworks and tools."
         />
         <meta property="og:image" content="/projects.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bcoder.vercel.app/projects" />
+
+        {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="مشاريعي - Portfolio" />
+        <meta name="twitter:title" content="My Projects | bcoder Portfolio" />
         <meta
           name="twitter:description"
-          content="Check out my latest projects in web development, UI design, and user experience."
+          content="Explore bcoder's web projects, UI/UX designs, and code built with React, Node.js, and modern web tech."
         />
         <meta name="twitter:image" content="/projects.webp" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
+
 
       <section className='w-full flex items-center justify-center gap-10 flex-col  py-10'>
         <motion.h1 className='relative px-[5%] text-[#ffb42a]  text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
@@ -113,8 +121,8 @@ function Projects() {
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >
-           {"{"} projects {"}"}
-         
+          {"{"} projects {"}"}
+
         </motion.h1>
 
         {/* <menu className='w-full  md:max-w-6xl  mx-auto  flex items-start   flex-wrap gap-[20px] 	bg-red-600'> */}

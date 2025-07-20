@@ -9,22 +9,49 @@ function Contact() {
   return (
     <>
       <Helmet>
+        <title>Contact Me | bcoder - Let's Work Together</title>
 
-        <title>Contact - Portfolio</title>
-        <meta name="description" content="Get in touch with me for web development, UI/UX design, and collaboration opportunities." />
+        <meta
+          name="description"
+          content="Get in touch with bcoder for professional web development, UI/UX design, or to discuss your next digital project or collaboration opportunity."
+        />
+        <meta
+          name="keywords"
+          content="contact bcoder, get in touch, web development services, UI/UX design contact, freelance developer, hire web developer, portfolio contact, work with bcoder, frontend developer contact"
+        />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Language" content="en" />
-        <meta name="author" content="Bcoder" />
-        <meta name="googlebot" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta property="og:title" content="Contact - Portfolio" />
-        <meta property="og:description" content="Reach out for web development services, UI/UX projects, and collaborations." />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="author" content="bcoder" />
+        <meta
+          name="googlebot"
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Contact Me | bcoder - Let's Work Together"
+        />
+        <meta
+          property="og:description"
+          content="Looking to build a website or improve your UI/UX? Reach out to bcoder and let's collaborate on your next project."
+        />
         <meta property="og:image" content={contact} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bcoder.vercel.app/contact" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact - Portfolio" />
-        <meta name="twitter:description" content="Reach out for web development services, UI/UX projects, and collaborations." />
+        <meta
+          name="twitter:title"
+          content="Contact Me | bcoder - Let's Work Together"
+        />
+        <meta
+          name="twitter:description"
+          content="Reach out to bcoder for professional web development and UI/UX design services. Let's create something great together."
+        />
         <meta name="twitter:image" content={contact} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
 
@@ -36,9 +63,9 @@ function Contact() {
           exit={{ opacity: 0, y: "50vh" }}
           transition={{ duration: 1 }}
         >
-         
-         {"{"} contact {"}"}
-          
+
+          {"{"} contact {"}"}
+
         </motion.h1>
 
 

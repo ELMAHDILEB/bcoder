@@ -33,25 +33,54 @@ const Home = memo(() => {
   return (
     <>
       <Helmet>
-        <title>Home Page - Portfolio</title>
-        <meta name="description" content="Explore my latest projects including web development, UI/UX designs, and more." />
+        <title>bcoder | Creative Web Developer & UI/UX Designer</title>
+
+        <meta
+          name="description"
+          content="Welcome to bcoder's portfolio. Discover professional projects in web development, UI/UX design, and cutting-edge technologies like React and Node.js."
+        />
+        <meta
+          name="keywords"
+          content="bcoder, portfolio, web developer, frontend developer, backend developer, full stack developer, UI design, UX design, JavaScript, HTML, CSS, React, Node.js, web projects, software engineer, freelance developer, modern web, clean code, responsive design"
+        />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Language" content="en" />
-        <meta name="author" content="Bcoder" />
-        <meta name="googlebot" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta property="og:title" content="Home Page - Portfolio" />
-        <meta property="og:description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta property="og:image" content="/home,jpeg" /> 
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="author" content="bcoder" />
+        <meta
+          name="googlebot"
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+
+        {/* Open Graph (for Facebook, LinkedIn, etc.) */}
+        <meta
+          property="og:title"
+          content="bcoder | Creative Web Developer & UI/UX Designer"
+        />
+        <meta
+          property="og:description"
+          content="Explore high-quality web development and UI/UX projects crafted by bcoder using modern frameworks."
+        />
+        <meta property="og:image" content="/home.jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bcoder.vercel.app/" />
+
+        {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Home Page - Portfolio" />
-        <meta name="twitter:description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta name="twitter:image" content="/home,jpeg" />
+        <meta
+          name="twitter:title"
+          content="bcoder | Creative Web Developer & UI/UX Designer"
+        />
+        <meta
+          name="twitter:description"
+          content="Welcome to my portfolio. Explore my best work in full stack development and UI/UX design."
+        />
+        <meta name="twitter:image" content="/home.jpeg" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
+
 
       <section className='w-full md:w-[80%] calcHeight  mx-auto'>
         <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden px-4 md:px-0">

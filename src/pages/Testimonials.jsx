@@ -57,13 +57,46 @@ function Testimonials() {
   return (
     <>
       <Helmet>
-        <title>Testimonials - Portfolio</title>
-        <meta name="description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta property="og:title" content="Testimonials  - Portfolio" />
-        <meta property="og:description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+        <title>Client Testimonials | bcoder - What People Say</title>
+
+        <meta
+          name="description"
+          content="Read what clients and collaborators say about working with bcoder — real feedback on web development, design quality, and professionalism."
+        />
+        <meta
+          name="keywords"
+          content="bcoder testimonials, client reviews, feedback, web development reviews, UI/UX feedback, portfolio testimonials, what clients say, developer reputation"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="author" content="bcoder" />
+        <meta
+          name="googlebot"
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Client Testimonials | bcoder" />
+        <meta
+          property="og:description"
+          content="See what clients say about working with bcoder — real feedback on professionalism, web development, and UI/UX quality."
+        />
+        <meta property="og:image" content="/testimonials.jpeg" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bcoder.vercel.app/testimonials" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Client Testimonials | bcoder" />
+        <meta
+          name="twitter:description"
+          content="Discover what clients and partners think of working with bcoder. Honest reviews from real projects."
+        />
+        <meta name="twitter:image" content="/testimonials.jpeg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
+
 
       <section className='w-full flex items-center justify-center gap-4 flex-col  pt-20 font-bebas text-black dark:text-white '>
         <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'

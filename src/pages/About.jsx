@@ -69,13 +69,52 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About - Portfolio</title>
-        <meta name="description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta property="og:title" content="About - Portfolio" />
-        <meta property="og:description" content="Explore my latest projects including web development, UI/UX designs, and more." />
-        <meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+        <title>About Me | bcoder - Web Developer & UI/UX Designer</title>
+
+        <meta
+          name="description"
+          content="Get to know bcoder — a passionate web developer and UI/UX designer focused on building clean, scalable, and user-friendly digital experiences."
+        />
+        <meta
+          name="keywords"
+          content="about bcoder, who is bcoder, web developer bio, UI designer background, software engineer, frontend developer, full stack developer, personal portfolio, about me web developer"
+        />
+        <meta name="author" content="bcoder" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="googlebot"
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="About Me | bcoder - Web Developer & UI/UX Designer"
+        />
+        <meta
+          property="og:description"
+          content="Learn more about bcoder, a creative and detail-oriented developer specialized in modern web technologies and UI/UX design."
+        />
+        <meta property="og:image" content="/about.jpeg" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bcoder.vercel.app/about" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Me | bcoder - Web Developer & UI/UX Designer"
+        />
+        <meta
+          name="twitter:description"
+          content="Meet bcoder — a frontend & full stack developer with a passion for UI/UX and clean code."
+        />
+        <meta name="twitter:image" content="/about.jpeg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
+
       <section className="w-full flex items-center justify-center gap-10 flex-col  pt-20 pb-20">
         <motion.h1
           className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
