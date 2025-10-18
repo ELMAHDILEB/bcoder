@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Allow: /
-Sitemap: https://bcoder.vercel.app/sitemap.xml
+Sitemap: https://bcoder.codes/sitemap.xml

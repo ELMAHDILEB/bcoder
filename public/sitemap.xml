@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://www.bcoder.codes/</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://www.bcoder.codes/about</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Projects Page -->
+    <url>
+        <loc>https://www.bcoder.codes/projects</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Testimonials Page -->
+    <url>
+        <loc>https://www.bcoder.codes/testimonials</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.bcoder.codes/contact</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- 404 Page (PageNotFound) -->
+    <url>
+        <loc>https://www.bcoder.codes/404</loc>
+        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>
