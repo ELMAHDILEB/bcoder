@@ -1,87 +1,39 @@
 import { memo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import avatar from "../assets/avatar.webp";
 import { TbPointFilled } from "react-icons/tb";
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
 import { SiLeetcode, SiFiverr, SiUpwork } from "react-icons/si";
 import { CiCoffeeCup } from "react-icons/ci";
 import { easeIn, easeInOut, motion } from "framer-motion";
+import { MetaData } from '../constants/MetaData';
+import MetaTags from '../components/MetaTags';
+
+const backgroundVariants = {
+  hidden: { width: "0%" },
+  visible: { width: "100%" },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const icons = [
+  { icon: FaGithub, link: "https://github.com/ELMAHDILEB" },
+  { icon: FaLinkedin, link: "https://www.linkedin.com/in/el-mahdi-belcadi-b62570236/" },
+  { icon: FaYoutube, link: "https://www.youtube.com/@okforcoding/videos" },
+  { icon: FaTwitter, link: "https://x.com/elmahdicoder" },
+  { icon: SiLeetcode, link: "https://leetcode.com/u/ELMAHDILEB/" },
+  { icon: SiFiverr, link: "https://khamsat.com/user/medbel09/services" },
+  { icon: SiUpwork, link: "https://www.upwork.com/freelancers/~011f7460d12065053a" },
+  { icon: CiCoffeeCup, link: "https://buymeacoffee.com/?via=mehdibelcau" },
+];
 
 const Home = memo(() => {
 
-  const backgroundVariants = {
-    hidden: { width: "0%" },
-    visible: { width: "100%" },
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const icons = [
-    { icon: FaGithub, link: "https://github.com/ELMAHDILEB" },
-    { icon: FaLinkedin, link: "https://www.linkedin.com/in/el-mahdi-belcadi-b62570236/" },
-    { icon: FaYoutube, link: "https://www.youtube.com/@okforcoding/videos" },
-    { icon: FaTwitter, link: "https://x.com/elmahdicoder" },
-    { icon: SiLeetcode, link: "https://leetcode.com/u/ELMAHDILEB/" },
-    { icon: SiFiverr, link: "https://khamsat.com/user/medbel09/services" },
-    { icon: SiUpwork, link: "https://www.upwork.com/freelancers/~011f7460d12065053a" },
-    { icon: CiCoffeeCup, link: "https://buymeacoffee.com/?via=mehdibelcau" },
-  ];
-
   return (
     <>
-      <Helmet>
-        <title>bcoder | Creative Web Developer & UI/UX Designer</title>
-
-        <meta
-          name="description"
-          content="Welcome to bcoder's portfolio. Discover professional projects in web development, UI/UX design, and cutting-edge technologies like React and Node.js."
-        />
-        <meta
-          name="keywords"
-          content="bcoder, portfolio, web developer, frontend developer, backend developer, full stack developer, UI design, UX design, JavaScript, HTML, CSS, React, Node.js, web projects, software engineer, freelance developer, modern web, clean code, responsive design"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Language" content="en" />
-        <meta name="author" content="bcoder" />
-        <meta
-          name="googlebot"
-          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-        />
-
-        {/* Open Graph (for Facebook, LinkedIn, etc.) */}
-        <meta
-          property="og:title"
-          content="bcoder | Creative Web Developer & UI/UX Designer"
-        />
-        <meta
-          property="og:description"
-          content="Explore high-quality web development and UI/UX projects crafted by bcoder using modern frameworks."
-        />
-        <meta property="og:image" content="/home.jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bcoder.vercel.app/" />
-
-        {/* Twitter Cards */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="bcoder | Creative Web Developer & UI/UX Designer"
-        />
-        <meta
-          name="twitter:description"
-          content="Welcome to my portfolio. Explore my best work in full stack development and UI/UX design."
-        />
-        <meta name="twitter:image" content="/home.jpeg" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
-
-
+      <MetaTags {...MetaData.home} />
       <section className='w-full md:w-[80%] calcHeight  mx-auto'>
         <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden px-4 md:px-0">
           <motion.picture
