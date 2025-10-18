@@ -45,12 +45,6 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- 404 Page (PageNotFound) -->
-    <url>
-        <loc>https://www.bcoder.codes/404</loc>
-        <lastmod>2025-10-18T12:34:04.916Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
+
 
 </urlset>
