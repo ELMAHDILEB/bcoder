@@ -17,25 +17,10 @@ const MainLayout = () => {
 
 
   return <>
-    <div className="min-h-screen w-full   relative -z-2">
+    <div className={`min-h-screen w-full relative -z-2 ${isDarkMode ? "dark" : ""}`}>
 
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, transparent 49%, ${isDarkMode ? "#ffffff20" : "#00000010"
-            } 49%, ${isDarkMode ? "#ffffff20" : "#00000010"
-            } 51%, transparent 51%),
-            linear-gradient(-45deg, transparent 49%, ${isDarkMode ? "#ffffff20" : "#00000010"
-            } 49%, ${isDarkMode ? "#ffffff20" : "#00000010"
-            } 51%, transparent 51%)
-          `,
-          backgroundSize: "40px 40px",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
-          maskImage:
-            "radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 70%)",
-        }}
+        className="absolute inset-0 bg-grid"
       />
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <section className="w-full md:w-[80%] h-full  mx-auto"> <Outlet /></section>

@@ -4,7 +4,6 @@ import MainLayout from './Layout/MainLayout';
 import { HelmetProvider } from 'react-helmet-async';
 import "./index.css";
 
-
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -12,10 +11,7 @@ const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Contact = lazy(() => import('./pages/Contact'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
-
 export default function App() {
-
-
 
   const pathElement = [
     { path: "/", element: <Home /> },
