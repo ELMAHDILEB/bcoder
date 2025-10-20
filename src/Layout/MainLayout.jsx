@@ -2,7 +2,6 @@ import { lazy, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { PacmanLoader } from "react-spinners";
 import useTheme from "../hooks/useTheme";
-// import "../styles/background.css"; // ✅ استيراد CSS
 
 const Navbar = lazy(() => import("../components/Navbar"));
 
