@@ -56,7 +56,7 @@ function Testimonials() {
   return (
     <>
       <MetaTags  {...MetaData.testimonials} />
-      <section className='w-full flex items-center justify-center gap-4 flex-col  pt-20 font-bebas text-black dark:text-white '>
+      <section className='w-full flex items-center justify-center gap-4 flex-col  pt-20 font-bebas text-black dark:text-white relative z-10'>
         <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
           initial={{ opacity: 1, y: "50vh", }}
           animate={{ opacity: 1, y: 0 }}

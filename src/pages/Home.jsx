@@ -34,7 +34,7 @@ const Home = memo(() => {
   return (
     <>
       <MetaTags {...MetaData.home} />
-      <section className='w-full md:w-[80%] calcHeight  mx-auto'>
+      <section className='w-full md:w-[80%] calcHeight  mx-auto relative z-10'>
         <div className="w-full h-full flex items-center justify-evenly flex-col gap-[50px] overflow-hidden px-4 md:px-0">
           <motion.picture
             className="w-[150px] h-[150px] overflow-hidden"

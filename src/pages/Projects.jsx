@@ -40,7 +40,7 @@ function Projects() {
   return (
     <>
       <MetaTags {...MetaData.projects} />
-      <section className='w-full flex flex-col items-center gap-10 py-10'>
+      <section className='w-full flex flex-col items-center gap-10 py-10 relative z-10'>
         <motion.h1
           className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
           initial={{ opacity: 1, y: "50vh" }}
@@ -64,7 +64,7 @@ function Projects() {
               <div className='h-[60%] w-full overflow-hidden'>
                 <img src={img} alt={title} loading="lazy" className='w-full h-full object-cover cursor-pointer' />
               </div>
-              <div className='w-full h-[40%] flex flex-col justify-center items-center gap-3'>
+              <div className='w-full h-[40%] flex flex-col justify-center items-center gap-3 dark:bg-[#5e5e5e] bg-[#dee4ec]'>
                 <h3 className='w-fit relative after:absolute left-0 top-0 -z-10 -skew-y-3 bg-bgOrange'>{title}</h3>
                 <p>Technologies</p>
                 <span className='text-[12px] bg-slate-200 dark:bg-[#5e5e5e] px-3 py-1 rounded-[5px]'>{technologies.join(" - ")}</span>

@@ -28,7 +28,7 @@ function About() {
   return (
     <>
       <MetaTags {...MetaData.about} />
-      <section className="w-full flex flex-col items-center gap-10 pt-20 pb-20">
+      <section className="w-full flex flex-col items-center gap-10 pt-20 pb-20 relative z-10">
         <motion.h1
           className='relative px-[5%] text-[#ffb42a] text-[1.5em] sm:text-[3em] tracking-[5px] font-medium font-bebas'
           initial={{ opacity: 1, y: "50vh" }}

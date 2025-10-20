@@ -7,7 +7,7 @@ import { useState, useEffect, } from "react";
 
 
 
-export default function Navbar() {
+export default function Navbar({isDarkMode, toggleTheme}) {
     const navLinks = [
         { to: "/", label: "Home" },
         { to: "/about", label: "About" },
@@ -17,22 +17,7 @@ export default function Navbar() {
     ];
     const [toggle, setToggle] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        const savedTheme = localStorage.getItem("theme");
-        return savedTheme === "dark";
-    })
 
-    const toggleTheme = () => {
-        setIsDarkMode((prevMode) => {
-            const newMode = !prevMode;
-            localStorage.setItem("theme", newMode ? "dark" : "light");
-            return newMode;
-        })
-    }
-    useEffect(() => {
-        isDarkMode ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-
-    }, [isDarkMode])
     const textCopy = "tcs6mehdi@gmail.com";
     const handleToggle = () => {
         setToggle((prev) => !prev);

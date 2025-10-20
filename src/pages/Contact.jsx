@@ -14,7 +14,7 @@ function Contact() {
   return (
     <>
       <MetaTags {...MetaData.contact} />
-      <section className='w-full flex items-center justify-center gap-10 flex-col  pt-20 p-[2%]'>
+      <section className='w-full flex items-center justify-center gap-10 flex-col  pt-20 p-[2%] relative z-10'>
         <motion.h1 className='relative px-[5%] text-[#ffb42a] text-[1.5em]  sm:text-[3em] tracking-[5px] font-medium font-bebas'
           initial={{ opacity: 1, y: "50vh", }}
           animate={{ opacity: 1, y: 0 }}
